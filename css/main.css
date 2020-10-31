@@ -45,9 +45,10 @@ body{
 }
 .home .nav-bar{
     width: calc(100% - 140px);
-    text-align: right
+    text-align: right;
+    position: relative;
 }
-.home .nav-bar .menu{
+.home .menu{
     padding: 5px 7px;
     border: 2px solid #fff;
     font-size: 25px;
@@ -55,6 +56,9 @@ body{
     height: 40px;
     color: #fff;
     border-radius: 7px;
+    background: none;
+    outline: none;
+    cursor: pointer;
 }
 .home .nav-bar ul li{
     padding: 8px 25px;
@@ -74,13 +78,6 @@ body{
 .home .nav-bar ul li a.active{
     border-bottom: 2px solid #19B5FE;
     color: #19B5FE;
-}
-.home .nav-bar ul .sign-up{
-    border: 1px solid #d8d8d8;
-    border-radius: 3px
-}
-.home .nav-bar ul .sign-up a{
-    padding: 0;
 }
 .home {
     padding-top: 70px;
@@ -132,6 +129,44 @@ body{
     background-color: #15a3e6;
     border: none;
 }
+@media only screen and (max-width: 991px){
+    .home .nav-bar{
+        position: absolute;
+        bottom: -280px;
+        left: 0;
+        background-color: #535353;
+        width: 96%;
+        margin: 0 2%;
+        padding: 5px 15px;
+        text-align: center;
+        border-radius: 8px;
+        transform-origin: top;
+    }
+    .home .nav-bar ul li{
+        display: block;
+        height: 45px;
+        padding: 15px 0;
+        border-radius: 4px;
+        transition: background-color .3s;
+    }
+    .home .nav-bar ul li:hover{
+        background-color: #15a3e6;
+    }
+    .home .nav-bar ul li a.active{
+        color:#fff;
+        border: none;
+    }
+    .home .nav-bar ul li:not(:last-of-type){
+        border-bottom: 1px solid #6b6b6b;
+    }
+    .home .nav-bar{
+        transform: perspective(1000px) rotateX(-90deg);
+        transition: transform .5s;
+    }
+    .home .nav-bar.click{
+        transform: perspective(1000px) rotateX(0deg);
+    }
+}
 @media only screen and (max-width: 767px){
     .home{
         padding-top: 130px;
@@ -170,6 +205,13 @@ body{
 @media only screen and (min-width: 992px){
     .home{
         padding-top: 130px;
+    }
+    .home .nav-bar ul .sign-up{
+        border: 1px solid #d8d8d8;
+        border-radius: 3px
+    }
+    .home .nav-bar ul .sign-up a{
+        padding: 0;
     }
     .home .content-div{
         width: 40%;
