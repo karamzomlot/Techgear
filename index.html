@@ -15,14 +15,14 @@
                 <div class="logo float-l">
                     <img src="img/Logo .png" alt="Logo" class="resp-img">
                 </div>
-                <nav class="nav-bar float-l">
-                    <span class="fas fa-bars menu float-r visible-xs visible-sm"></span>
-                    <ul class="clasic-list hidden-sm hidden-xs">
-                        <li class="inline-block"><a href="#" class="active">Home</a></li>
-                        <li class="inline-block"><a href="#">Products</a></li>
-                        <li class="inline-block"><a href="#">Services</a></li>
-                        <li class="inline-block"><a href="#">Memeberes</a></li>
-                        <li class="inline-block"><a href="#">Contacts</a></li>
+                <button class="menu float-r visible-xs visible-sm" id="menu"><span class="fas fa-bars"></span></button>
+                <nav class="nav-bar float-l" id="nav-bar">
+                    <ul class="clasic-list">
+                        <li class="inline-block"><a href="#home" class="active">Home</a></li>
+                        <li class="inline-block"><a href="#product">Products</a></li>
+                        <li class="inline-block"><a href="#service">Services</a></li>
+                        <li class="inline-block"><a href="#members">Memeberes</a></li>
+                        <li class="inline-block"><a href="#contact">Contacts</a></li>
                         <li class="inline-block sign-up"><a href="#">Sign in</a></li>
                     </ul>
                 </nav>
@@ -47,8 +47,9 @@
         <div class="clearfix"></div>
     </header>
     <!-- End Header -->
+    <!-- CopyRight 2020 -karam-KYTC All Right Reserved. -->
     <!-- Start Products -->
-    <section class="product section">
+    <section class="product section" id="product">
         <div class="container">
             <div class="sec-title">
                 <h2 class="sec-head text-center">Which type of gear are you looking for?</h2>
@@ -76,8 +77,9 @@
         </div>
     </section>
     <!-- End Products -->
+    <!-- CopyRight 2020 -karam-KYTC All Right Reserved. -->
     <!-- Start Services -->
-    <section class="service section">
+    <section class="service section"  id="service">
         <div class="container">
             <div class="sec-title">
                 <h2 class="sec-head text-center">We provide more than high-tech products!</h2>
@@ -124,8 +126,9 @@
         </div>
     </section>
     <!-- End Services -->
+    <!-- CopyRight 2020 -karam-KYTC All Right Reserved. -->
     <!-- Start Members -->
-    <section class="members section">
+    <section class="members section"  id="members">
         <div class="container">
             <div class="sec-title">
                 <h2 class="sec-head text-center">We proudly introduce our powerful members</h2>
@@ -155,8 +158,9 @@
         </div>
     </section>
     <!-- End Memebers -->
+    <!-- CopyRight 2020 -karam-KYTC All Right Reserved. -->
     <!-- Start Contacts -->
-    <section class="contact section">
+    <section class="contact section"  id="contact">
         <div class="container">
             <div class="sec-title">
                 <h2 class="sec-head text-center">Some ways for you to contact us</h2>
@@ -190,6 +194,7 @@
         </div>
     </section>
     <!-- End Contacts -->
+    <!-- CopyRight 2020 -karam-KYTC All Right Reserved. -->
     <!-- Start Footer -->
     <footer class="footer section">
         <div class="container">
@@ -241,26 +246,16 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <!-- CopyRight 2020 -karam-KYTC All Right Reserved. -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu").click(function(){
+                $("#nav-bar").toggleClass('click')
+            })
+        })
+    </script>
 </body>
 </html>
-
-
-<!-- 
-
-    <span class="fas fa-cart-plus"></span>
-
-    <span class="fas fa-info-circle"></span>
-
-    <span class="fas fa-phone-alt"></span>
-
-    <span class="far fa-envelope"></span>
-
-    <span class="fab fa-facebook-f"></span>
-
-    <span class="fab fa-instagram"></span>
-
-    <span class="fab fa-twitter"></span>
-
-    <span class="fab fa-linkedin-in"></span>
-
- -->
